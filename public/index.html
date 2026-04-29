@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Scraper</title>
+</head>
+<body>
+
+<h1>Book Scraper</h1>
+<button onclick="loadBooks()">Load Books</button>
+
+<ul id="bookList"></ul>
+
+<script>
+async function loadBooks() {
+  const res = await fetch("/api/books");
+  const books = await res.json();
+
+  const list = document.getElementById("bookList");
+  list.innerHTML = "";
+
+  books.forEach(book => {
+    const li = document.createElement("li");
+    li.textContent = book;
+    list.appendChild(li);
+  });
+}
+</script>
+
+</body>
+</html>
