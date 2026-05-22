@@ -71,31 +71,6 @@ http://localhost:3000
 
 ---
 
-## 🔌 API Endpoint
-
-### GET `/api/books`
-
-Query parameters:
-
-* `range` → page range (e.g. `1-3`)
-
-Example:
-
-```
-http://localhost:3000/api/books?range=1-2
-```
-
-Response:
-
-```json
-{
-  "Page 1": ["Book A", "Book B"],
-  "Page 2": ["Book C", "Book D"]
-}
-```
-
----
-
 ## ⚠️ Notes
 
 * This project uses a practice website designed for scraping
